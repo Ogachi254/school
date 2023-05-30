@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+  Home | X Group Of Schools
+{% endblock %}
+
+{% block content %}
+  <div class="text-center">
+    <h1>Welcome to X Group Of Schools</h1>
+    <p>Providing quality education since 1990.</p>
+
+    <h2>About Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae tristique odio. Sed aliquet sagittis lorem id commodo. Sed et quam at magna commodo pellentesque.</p>
+
+    <h2>Our Programs</h2>
+    <ul>
+      <li>Primary Education</li>
+      <li>Secondary Education</li>
+      <li>Extracurricular Activities</li>
+    </ul>
+
+    <h2>Contact Us</h2>
+    <p>For more information, please <a href="{% url 'contact' %}">contact us</a>.</p>
+  </div>
+{% endblock %}

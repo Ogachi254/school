@@ -1,0 +1,170 @@
+/* Global styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Navbar styles */
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px; /* Add padding to the navbar */
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px; /* Add margin to the right of the navbar brand */
+}
+
+.navbar-nav {
+    margin-left: auto;
+    padding-right: 10px; /* Add padding to the right of the navbar nav */
+}
+
+.nav-link {
+    color: #fff;
+    margin-right: 10px; /* Add margin to the right of each navbar link */
+}
+
+.navbar-divider {
+    border-bottom: 1px solid #fff;
+    margin: 10px 0; /* Add margin to the navbar divider */
+}
+
+.nav-top-icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.nav-top-item {
+    margin-right: 20px;
+}
+
+.upper-navbar {
+    background-color: #fff;
+    padding: 10px; /* Add padding to the upper navbar */
+}
+
+.upper-navbar .nav-link {
+    color: #333;
+}
+
+.lower-navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px; /* Add padding to the lower navbar */
+}
+
+.lower-navbar .nav-link {
+    color: #fff;
+}
+.social-icons {
+    margin-left: 20px;
+}
+
+.social-icons a {
+    margin-right: 5px;
+    color: #fff;
+}
+
+/* Navbar content */
+
+.phone-number {
+    font-size: 14px;
+    margin-top: 5px; /* Add margin to the top of the phone number */
+    color: #ccc;
+}
+
+.apply-now {
+    margin-left: 20px;
+}
+
+.apply-now-link {
+    background-color: purple;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Main content styles */
+
+.content {
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Footer styles */
+
+footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #777;
+}
+
+.footer-link {
+    color: #777;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Custom styles */
+
+.d-flex.align-items-center.justify-content-between.w-100 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.d-flex.align-items-center {
+    display: flex;
+    align-items: center;
+}
