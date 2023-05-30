@@ -1,40 +1,43 @@
+<!-- base.html -->
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>{% block title %}School Web App{% endblock title %}</title>
-  {% load static %}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Add Font Awesome CSS link here -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous">
-  <link href="{% static 'css/base.css' %}" rel="stylesheet">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% block head %}
-  {% endblock %}
+    <title>{% block title %}School Web App{% endblock title %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Add Font Awesome CSS link here -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block head %}
+    {% endblock %}
 </head>
+
 <body>
-  <header>
-    {% include 'nav.html' %}
-  </header>
-  <main class="container">
-    <div class="content">
-      {% block content %}
-      {% endblock %}
-    </div>
-  </main>
-  <footer>
-    {% include 'footer.html' %}
-  </footer>
+    <header>
+        {% include 'nav.html' %}
+    </header>
+    <main class="container">
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
 
-  <!-- Bootstrap JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-  crossorigin="anonymous"></script>
+    <!-- Add the Bootstrap JavaScript library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
-  {% block javascript %}
-  <script src="{% static 'js/scripts.js' %}"></script>
-  {% endblock javascript %}
+    {% block javascript %}
+    <script src="{% static 'js/scripts.js' %}"></script>
+    {% endblock javascript %}
 </body>
+
 </html>
