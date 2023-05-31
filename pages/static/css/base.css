@@ -58,11 +58,13 @@ body {
     padding: 10px; /* Add padding to the upper navbar */
 }
 
+
 .upper-navbar .nav-link {
     color: #333;
 }
 
 .lower-navbar {
+    position: relative;
     background-color: #333;
     color: #fff;
     padding: 10px; /* Add padding to the lower navbar */
@@ -70,6 +72,32 @@ body {
 
 .lower-navbar .nav-link {
     color: #fff;
+}
+
+.lower-navbar .nav-item.active {
+    background-color: #fff; /* Adjust the background color for the active section */
+}
+
+.lower-navbar .nav-item.active .nav-link {
+    color: #333333; /* Adjust the text color for the active section */
+}
+
+.lower-navbar:after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff; /* Adjust the background color for the active section indicator */
+}
+.lower-navbar .navbar-toggler {
+    color: #fff; /* Set the color of the navbar toggler button */
+    border-color: #ffffffd5; /* Set the border color of the navbar toggler button */
+    background-color: #ffffff34; /* Set the background color of the navbar toggler button */
+}
+.lower-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='3' y1='12' x2='27' y2='12' stroke='%23ffffff' stroke-width='2'/%3E%3Cline x1='3' y1='18' x2='27' y2='18' stroke='%23ffffff' stroke-width='2'/%3E%3Cline x1='3' y1='24' x2='27' y2='24' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E");
 }
 
 .social-icons {
