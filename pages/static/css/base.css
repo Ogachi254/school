@@ -252,18 +252,33 @@ footer {
     background-color: #f5f5f5;
     padding: 20px;
     text-align: center;
-}
-
-.footer-text {
+  }
+  
+  .footer-text {
     font-size: 14px;
     color: #777;
-}
-
-.footer-link {
+  }
+  
+  .footer-link {
     color: #777;
     text-decoration: none;
-}
-
-.footer-link:hover {
+  }
+  
+  .footer-link:hover {
     text-decoration: underline;
-}
+  }
+  
+  footer p {
+    color: #fff;
+  }
+  
+  .row-left-align {
+    text-align: left;
+    justify-content: center;
+  }
+  
+  .row-left-align .col-md-2 {
+    text-align: center;
+  }
+  
+  
