@@ -280,5 +280,8 @@ footer {
   .row-left-align .col-md-2 {
     text-align: center;
   }
-  
+  .footer-separator {
+    border-top: 1px solid #fff;
+    margin: 20px 0;
+  }
   
