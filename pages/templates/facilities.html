@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="facilities-row">
+        <div class="facilities-image">
+            <h2 class="facilities-title">Facilities</h2>
+            <img src="{% static 'images/facilities A.jpg' %}" style="width: 100%; height: 100%; object-fit: cover;">  
+            <p class="facilities-navigation">
+                <a href="{% url 'home' %}" class="facilities-link">Home</a> >>
+                <a href="{% url 'facilities' %}" class="facilities-link">Facilities</a>
+            </p>
+        </div>
+    </div>
+
+    <h2>School Facilities</h2>
+    <ul>
+        <li>Library</li>
+        <li>Laboratories</li>
+        <li>Sports Field</li>
+        <li>Computer Lab</li>
+        <li>Art Studio</li>
+    </ul>
+{% endblock %}
