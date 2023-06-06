@@ -5,21 +5,25 @@
 {% block content %}
     <div class="facilities-row">
         <div class="facilities-image">
-            <h2 class="facilities-title">Facilities</h2>
-            <img src="{% static 'images/facilities A.jpg' %}" style="width: 100%; height: 100%; object-fit: cover;">  
-            <p class="facilities-navigation">
-                <a href="{% url 'home' %}" class="facilities-link">Home</a> >>
-                <a href="{% url 'facilities' %}" class="facilities-link">Facilities</a>
-            </p>
+            <img src="{% static 'images/facilities A.jpg' %}" alt="Facilities Image" class="facilities-image">
+            <div class="facilities-title-container">
+                <h2 class="facilities-title">Facilities</h2>
+                <p class="facilities-navigation">
+                    <a href="{% url 'home' %}" class="facilities-link">Home</a> >>
+                    <a href="{% url 'facilities' %}" class="facilities-link">Facilities</a>
+                </p>
+            </div>
         </div>
     </div>
 
-    <h2>School Facilities</h2>
-    <ul>
-        <li>Library</li>
-        <li>Laboratories</li>
-        <li>Sports Field</li>
-        <li>Computer Lab</li>
-        <li>Art Studio</li>
-    </ul>
+        <div class="co-curricular-content">
+            <h2 class="co-curricular-heading">Co-Curricular & Facilities</h2>
+            <p class="co-curricular-text">
+                X's strides towards excellence banks on diverse student co-curricular life that provides both inspiration and aspirations. Clubs are an integral weekly routine, undertaken in the provision of quality holistic education that Riara envisions. Club activities are carefully selected to ensure that learning is stimulating, fulfilling, and uniquely nurturing the children’s interests and skills. The student’s choice and interest are always paramount. For over ten years now, stars have been born here and nurtured into giants in various professions.
+            </p>
+            <p class="co-curricular-text">
+                Soccer, Swimming, Skating, Tae kwondo, Go karting, Horse Riding, Tennis, Dance Club, Art Club, Computer lessons, Chess Club, Ballet Dance, Piano, Guitar, Violin, Drums, Saxophone, Trombone, Trumpet/Cornet, Voice
+            </p>
+        </div>
+    </div>
 {% endblock %}
