@@ -7,21 +7,399 @@
 {% endblock %}
 
 {% block content %}
-  <div class="text-center">
-    <h1>Welcome to X Group Of Schools</h1>
-    <p>Providing quality education since 1990.</p>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
 
-    <h2>About Us</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae tristique odio. Sed aliquet sagittis lorem id commodo. Sed et quam at magna commodo pellentesque.</p>
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-    <h2>Our Programs</h2>
-    <ul>
-      <li>Primary Education</li>
-      <li>Secondary Education</li>
-      <li>Extracurricular Activities</li>
-    </ul>
+h1 {
+  margin-top: 0;
+  color: #333;
+  font-size: 2em;
+}
 
-    <h2>Contact Us</h2>
-    <p>For more information, please <a href="{% url 'contact' %}">contact us</a>.</p>
+h2 {
+  font-size: 24px;
+  margin-top: 0;
+  color: #333;
+}
+
+h3 {
+  font-size: 20px;
+  margin-top: 0;
+  color: #333;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.row {
+  margin-bottom: 1rem;
+}
+
+.col-md-6 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col-md-6 img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 576px) {
+  .col-md-6 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md-6 {
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-6 {
+    width: 25%;
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 32px;
+}
+
+.section-title h3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.school-item {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.school-item img {
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.school-item h3 {
+  margin-top: 20px;
+}
+
+.school-item p {
+  color: #777;
+}
+
+.our-accomplishments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.our-accomplishments .col-md-6 {
+  width: 48%;
+}
+
+.our-accomplishments .col-md-6:nth-child(odd) {
+  text-align: right;
+}
+
+.our-mission {
+  margin-top: 30px;
+}
+
+.our-mission p {
+  color: #777;
+  line-height: 1.6;
+}
+
+.our-vision ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.our-values ul {
+  list-style-type: square;
+  margin-left: 20px;
+}
+
+.our-values li {
+  margin-bottom: 5px;
+}
+
+.our-facilities .col-md-6 {
+  margin-bottom: 30px;
+}
+
+.our-community .col-md-6 {
+  margin-bottom: 30px;
+}
+.home-row {
+  position: relative;
+}
+
+.home-image {
+  position: relative;
+}
+
+.home-slide-image {
+  width: 100%;
+  height: auto;
+}
+
+.home-content-left {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: #fff;
+  text-align: left;
+}
+
+.home-text {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.home-navigation {
+  font-size: 18px;
+}
+
+.home-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .home-content-left {
+    top: auto;
+    right: auto;
+    bottom: 20px;
+    left: 20px;
+    transform: none;
+    text-align: left;
+  }
+}
+
+
+
+</style>
+<div class="home-row">
+  <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="home-image">
+          <img src="{% static 'images/home A.jpg' %}" alt="home Image" class="home-slide-image">
+          <div class="home-content-left">
+            <p class="home-text">A reputable institution <br> offering quality and <br> holistic education.</p>
+            <p class="home-navigation">
+              <a href="{% url 'about' %}" class="home-link">Learn More</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="home-image">
+          <img src="{% static 'images/home B.jpg' %}" alt="home Image" class="home-slide-image">
+          <div class="home-content-left">
+            <p class="home-text">A reputable institution offering quality and holistic education.</p>
+            <p class="home-navigation">
+              <a href="{% url 'about' %}" class="home-link">Learn More</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="home-image">
+          <img src="{% static 'images/home C.jpg' %}" alt="home Image" class="home-slide-image">
+          <div class="home-content-left">
+            <p class="home-text">A reputable institution offering quality and holistic education.</p>
+            <p class="home-navigation">
+              <a href="{% url 'about' %}" class="home-link">Learn More</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{% static 'images/school-building.jpg' %}" alt="School building" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h1>Welcome to X Group Of Schools</h1>
+        <p>Providing quality education since 1990.</p>
+        <p>X Group Of Schools is a private school that was founded in 1990. We offer a variety of programs, including primary education, secondary education, and extracurricular activities. We are committed to providing our students with a high-quality education in a nurturing environment.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <h2>6</h2>
+        <p>Schools are <br> spread across three campuses.</p>
+      </div>
+      <div class="col-md-3">
+        <h2>33</h2>
+        <p>Years of <br> academic excelence</p>
+      </div>
+      <div class="col-md-3">
+        <h2>100%</h2>
+        <p>Graduating seniors accepted <br> into High school and reputable <br> institutions of higher learning.</p>
+      </div>
+      <div class="col-md-3">
+        <h2>100%</h2>
+        <p>Of students participate in <br> social extra-curricular activities. </p>
+      </div>
+    </div>
+    
+
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Our Programs</h2>
+        <ul>
+          <li>Primary Education: We offer a comprehensive primary education program that prepares students for secondary school. Our primary school program includes subjects such as math, science, English, social studies, and the arts.</li>
+          <li>Secondary Education: We offer a rigorous secondary education program that prepares students for college and beyond. Our secondary school program includes subjects such as AP classes, honors classes, and electives.</li>
+          <li>Extracurricular Activities: We offer a variety of extracurricular activities, including sports, clubs, and student government. Our extracurricular activities provide students with opportunities to develop their talents and interests.</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <img src="{% static 'images/programme-image.png' %}" alt="Program Image" class="img-fluid">
+      </div>
+    </div>
+    
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Schools</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>X Kindergaten</h3>
+            <img src="{% static 'images/school1.jpg' %}" alt="School 1" class="img-fluid">
+            <p>A committed educational facility, X Kindergarten and Primary School is focused on offering young children great services. We provide a safe, encouraging environment where kids can learn, explore, and hone important skills. Our seasoned instructors encourage a love of learning via age-appropriate activities and a play-based curriculum while maintaining a friendly environment. By encouraging holistic development that incorporates social, emotional, cognitive, and physical dimensions, we hope to establish a solid foundation for academic and personal progress. We make sure every child receives the required instruction and assistance by maintaining small class sizes and providing individualized care. We cultivate a lifetime love of learning, stimulate curiosity, and enable each child to realize their full potential in a changing world through our extensive curriculum, extracurricular activities, and collaborative interaction with parents.            </p>
+          </div>
+          <div class="col-md-6">
+            <h3>X primary</h3>
+            <img src="{% static 'images/school2.jpg' %}" alt="School 2" class="img-fluid">
+            <p>Our elementary school is committed to giving kids the best possible education during these formative years. We provide a thorough curriculum with an emphasis on fundamental disciplines including math, science, language arts, social studies, and the arts. We work hard to help our kids develop critical thinking, problem-solving, and effective communication skills through the use of knowledgeable and committed educators. Each student can succeed intellectually and personally thanks to our small class sizes, which provide individualized attention and support. In addition to our demanding academic program, we provide a variety of extracurricular activities to promote holistic development and accommodate different interests.We are committed to fostering an accepting and supportive environment where each kid can realize their full potential and feel respected. At our primary school, we're dedicated to creating a solid educational foundation, fostering a passion of learning, and putting our kids in the best possible position to succeed in the future.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>X JuiniorHigh School</h3>
+            <img src="{% static 'images/school3.jpg' %}" alt="School 3" class="img-fluid">
+            <p>DDuring these years of transition, our junior secondary school is committed to offering pupils great educational offerings. Our extensive curriculum helps students get ready for the demands of higher education by building on the information and abilities they already have from basic school. Our knowledgeable and enthusiastic professors foster a friendly and stimulating learning atmosphere that encourages students to investigate new topics and hone their critical thinking skills. We strive to promote academic success and intellectual development by placing a strong emphasis on key disciplines like science, math, language arts, social studies, and foreign languages.In addition, we provide a variety of extracurricular activities, enrichment programs, sports, clubs, arts, and community participation opportunities that support holistic development. Our dedicated staff is committed to giving each student individualized attention and assistance because we believe in fostering their distinctive abilities and interests. At our junior secondary school, we work hard to give children the confidence they need to excel in school and manage the challenges of the outside world with resiliency and adaptability.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <h3>X Seniour High School</h3>
+            <img src="{% static 'images/school4.jpg' %}" alt="School 4" class="img-fluid">
+            <p>Our senior secondary school is dedicated to giving pupils exceptional educational support during their key senior years of study. We provide a thorough and demanding curriculum that equips students for further study and upcoming career aspirations. Our qualified teachers provide rigorous training in disciplines including math, physics, languages, the humanities, and specialist electives with a strong emphasis on academic performance. We work to develop our students' analytical, problem-solving, and critical thinking abilities so they will have what they need to succeed in their chosen industries. Collaboration, creativity, and independent thinking are all encouraged in our school's friendly and welcoming learning environment.We offer a wide choice of extracurricular activities, leadership opportunities, and community service initiatives in addition to academic success to promote personal development, social awareness, and all-around development. We place a high value on providing individualized attention and support to students as they traverse their academic journeys and make decisions about their futures. At our senior secondary school, we are committed to empowering students to become responsible, self-assured adults ready to make a constructive contribution to society by preparing them for the opportunities and challenges that lie ahead.
+             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Our Facilities</h2>
+        <p>We have a state-of-the-art campus with modern facilities. Our classrooms are equipped with the latest technology, and our students have access to a variety of resources, including a library, a computer lab, and a gymnasium.</p>
+        <img src="{% static 'images/facilities.jpg' %}" alt="facilities" class="img-fluid">
+      </div>
+      <div class="col-md-4">
+        <h2>Our Community</h2>
+        <p>We are deeply connected with our community and actively engage with local organizations and events. We believe in fostering a sense of belonging and responsibility among our students.</p>
+        <img src="{% static 'images/our-community.jpg' %}" alt="our community" class="img-fluid">
+      </div>
+      <div class="col-md-4">
+        <h2>Our Accomplishments</h2>
+        <p>X Group Of Schools is proud of its many accomplishments. Our students have consistently scored high on standardized tests, and many of our graduates have gone on to attend prestigious colleges and universities. We are also proud of our extracurricular programs, which have won numerous awards.</p>
+        <img src="{% static 'images/accomplishments.jpg' %}" alt="accomplishments" class="img-fluid">
+      </div>
+    </div>
+    
+
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Our Vision</h2>
+        <p>Our vision is to be a leading provider of education in the community. We want to be known for our high-quality programs, our dedicated teachers, and our commitment to student success.</p>
+        <img src="{% static 'images/vision.jpg' %}" alt="vision" class="img-fluid">
+      </div>
+      <div class="col-md-4">
+        <h2>Our Values</h2>
+        <ul>
+          <li>Excellence: We strive for excellence in everything we do.</li>
+          <li>Integrity: We are honest and trustworthy.</li>
+          <li>Respect: We treat each other with respect.</li>
+          <li>Diversity: We celebrate our diversity and value the contributions of all members of our community.</li>
+          <li>Collaboration: We work together to achieve our goals.</li>
+        </ul>
+        <img src="{% static 'images/values.png' %}" alt="values" class="img-fluid">
+      </div>
+      <div class="col-md-4">
+        <h2>Our Mission</h2>
+        <p>Our mission is to inspire possibilities for student success through a broad range of unique teaching and learning opportunities. We believe that all students can succeed, and we are committed to providing them with the resources and support they need to reach their full potential.</p>
+        <img src="{% static 'images/mission.jpg' %}" alt="mission" class="img-fluid">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2>Join Our School</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 text-center bg-white icon-column">
+        <i class="fas fa-user-plus fa-5x"></i>
+        <h3>Become Part of Our School</h3>
+        <button class="btn btn-primary" href="enroll-now.html">Enroll Now</button>
+      </div>
+      <div class="col-md-4 text-center bg-white icon-column">
+        <i class="fas fa-star fa-5x"></i>
+        <h3>Review Our Terms Prior to Joining</h3>
+        <a class="btn btn-primary" href="fees-terms.html">View Fees & Terms</a>
+      </div>
+      <div class="col-md-4 text-center bg-white icon-column">
+        <i class="fas fa-map-marker-alt fa-5x"></i>
+        <h3>Meet Our Fraternity</h3>
+        <a class="btn btn-primary" href="school-visit.html">Book a School Visit</a>
+      </div>
+    </div>
   </div>
 {% endblock %}
