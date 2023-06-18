@@ -4,157 +4,198 @@
 
 {% block content %}
 <style>
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  body {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #333;
+  }
 
-.column {
-  flex: 1;
-  padding: 10px;
-}
-
-.contact-info {
-  margin-bottom: 30px;
-}
-
-.contact-map {
-  margin-bottom: 30px;
-}
-
-.contact-hours,
-.contact-directions {
-  margin-top: 30px;
-}
-
-.contact-banner {
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2f2f2;
-}
-
-.contact-banner-image {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.contact-banner-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.contact-banner-title-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-}
-
-.contact-banner-title {
-  font-size: 40px;
-  font-family: sans-serif;
-  font-weight: 600;
-}
-
-.contact-banner-navigation {
-  font-size: 18px;
-  font-family: sans-serif;
-  font-weight: 300;
-}
-
-.contact-banner-link {
-  color: #fff;
-  text-decoration: none;
-  border: 1px solid #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.contact-banner-link:hover {
-  background-color: #fff;
-  color: #000;
-}
-
-@media (max-width: 768px) {
   .row {
-    flex-direction: column;
-    align-items: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .column {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .contact-info {
+    margin-bottom: 30px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  .contact-map {
+    margin-bottom: 30px;
+  }
+
+  .contact-map iframe {
+    border: 1px solid #ccc;
+  }
+
+  .contact-hours,
+  .contact-directions {
+    margin-top: 30px;
+    background-color: #f2f2f2;
+    padding: 20px;
   }
 
   .contact-banner {
-    height: auto;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
   }
 
   .contact-banner-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    position: relative;
   }
-}
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.container h2 {
-  margin-top: 0;
-}
-.title1 {
-  background-color: #ff0000;
-}
-
-.title2 {
-  background-color: #00ff00;
-}
-
-.title3 {
-  background-color: #0000ff;
-}
-
-.title4,
-.title5,
-.title6 {
-  background-color: #cccccc;
-}
-
-/* Add the following styles for the content */
-
-.content1,
-  .content2,
-  .content3 {
-    display: none;
-    padding: 10px;
-    background-color: #f2f2f2;
+  .contact-banner-image img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .contact-banner-title-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+  }
+
+  .contact-banner-title {
+    color: #000;
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .contact-banner-navigation {
+    color: #000;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 300;
+    margin-top: 10px;
+  }
+
+  .contact-banner-link {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+  }
+
+  .contact-banner-link:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .contact-banner {
+      height: auto;
+    }
+
+    .contact-banner-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .ccontainer {
     max-width: 960px;
     margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
   }
 
-  .active {
-    display: block;
+  .ccontainer h2 {
+    margin-top: 0;
+    color: #000;
+    font-size: 24px;
+  }
+
+  .contact-info p {
+    line-height: 1.6;
+  }
+
+  .contact-info b {
+    color: #333;
+  }
+
+  form .form-group label {
+    font-weight: bold;
+    color: #333;
+  }
+
+  form .form-group input,
+  form .form-group textarea {
     width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
   }
 
-.column:hover .title1,
-.column:hover .title2,
-.column:hover .title3 {
-  cursor: pointer;
-  color: #fff;
-}
+  form .form-group textarea {
+    height: 150px;
+  }
 
-.column:hover .title4,
-.column:hover .title5,
-.column:hover .title6 {
-  cursor: pointer;
-}
+  form button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  form button:hover {
+    background-color: #45a049;
+  }
+
+  .contact-map h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .contact-hours h2,
+  .contact-directions h2 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 20px;
+  }
+
+  .contact-hours p,
+  .contact-directions p {
+    line-height: 1.6;
+  }
+
+  .contact-hours b {
+    color: #333;
+  }
+
 </style>
 
 <div class="contact-banner">
@@ -170,7 +211,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="ccontainer">
   <div class="row">
     <div class="column">
       <h3>Contact Us</h3>
@@ -178,160 +219,80 @@
       <p>You are welcome to join the family, we hope. Use the contact details below to send questions regarding our admissions procedure, student life, careers, our campuses, or anything else you'd like to know.</p>
     </div>
   </div>
+
   <div class="contact-info">
     <div class="row">
       <div class="column">
-        <h2 class="title1">X Group Of School</h2>
-        <div class="row">
-            <div class="column">
-                <h2>Contact Details</h2>
-                <p>
-                  Our school is located at <b>123 Main Street</b>, Anytown, CA 12345.
-                </p>
-                <p>
-                  You can reach us by phone at <b>(123) 456-7890</b> or by email at <b>info@school.com</b>.
-                </p>
-                <p>
-                  We are open Monday through Friday from <b>9am to 5pm</b>.
-                </p>
-                <p>
-                  We are also available by appointment on Saturdays from <b>10am to 2pm</b>.
-                </p>
-                <p>
-                  Please feel free to contact us with any questions or concerns you may have.
-                </p>
-              </div>
-              <div class="column">
-                <form action="/contact" method="post">
-                  <input type="text" name="name" placeholder="Your Name">
-                  <input type="email" name="email" placeholder="Your Email">
-                  <input type="text" name="subject" placeholder="Subject">
-                  <textarea name="message" placeholder="Your Message"></textarea>
-                  <input type="submit" value="Submit">
-                </form>
-              </div>
-        </div>
+        <h2>Contact Details</h2>
+        <p>
+          Our school is located at <b>123 Main Street</b>, Anytown, CA 12345.
+        </p>
+        <p>
+          You can reach us by phone at <b>(123) 456-7890</b> or by email at <b>info@school.com</b>.
+        </p>
+        <p>
+          We are open Monday through Friday from <b>9am to 5pm</b>.
+        </p>
+        <p>
+          We are also available by appointment on Saturdays from <b>10am to 2pm</b>.
+        </p>
+        <p>
+          Please feel free to contact us with any questions or concerns you may have.
+        </p>
       </div>
       <div class="column">
-        <h2 class="title2">X School</h2>
-        <div class="row">
-            <div class="column">
-                <h2>Contact Details</h2>
-                <p>
-                  Our school is located at <b>123 Main Street</b>, Anytown, CA 12345.
-                </p>
-                <p>
-                  You can reach us by phone at <b>(123) 456-7890</b> or by email at <b>info@school.com</b>.
-                </p>
-                <p>
-                  We are open Monday through Friday from <b>9am to 5pm</b>.
-                </p>
-                <p>
-                  We are also available by appointment on Saturdays from <b>10am to 2pm</b>.
-                </p>
-                <p>
-                  Please feel free to contact us with any questions or concerns you may have.
-                </p>
-              </div>
-              <div class="column">
-                <form action="/contact" method="post">
-                  <input type="text" name="name" placeholder="Your Name">
-                  <input type="email" name="email" placeholder="Your Email">
-                  <input type="text" name="subject" placeholder="Subject">
-                  <textarea name="message" placeholder="Your Message"></textarea>
-                  <input type="submit" value="Submit">
-                </form>
-              </div>
-        </div>
-      </div>
-      <div class="column">
-        <h2 class="title3">X Springs</h2>
-        <div class="row">
-            <div class="column">
-                <h2>Contact Details</h2>
-                <p>
-                  Our school is located at <b>123 Main Street</b>, Anytown, CA 12345.
-                </p>
-                <p>
-                  You can reach us by phone at <b>(123) 456-7890</b> or by email at <b>info@school.com</b>.
-                </p>
-                <p>
-                  We are open Monday through Friday from <b>9am to 5pm</b>.
-                </p>
-                <p>
-                  We are also available by appointment on Saturdays from <b>10am to 2pm</b>.
-                </p>
-                <p>
-                  Please feel free to contact us with any questions or concerns you may have.
-                </p>
-              </div>
-              <div class="column">
-                <form action="/contact" method="post">
-                  <input type="text" name="name" placeholder="Your Name">
-                  <input type="email" name="email" placeholder="Your Email">
-                  <input type="text" name="subject" placeholder="Subject">
-                  <textarea name="message" placeholder="Your Message"></textarea>
-                  <input type="submit" value="Submit">
-                </form>
-              </div>
+        <div class="container">
+          <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter the subject of your message">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var title1 = document.querySelector('.title1');
-      var title2 = document.querySelector('.title2');
-      var title3 = document.querySelector('.title3');
-  
-      title1.addEventListener('click', function () {
-        title1.parentElement.classList.add('active');
-        title2.parentElement.classList.remove('active');
-        title3.parentElement.classList.remove('active');
-      });
-  
-      title2.addEventListener('click', function () {
-        title1.parentElement.classList.remove('active');
-        title2.parentElement.classList.add('active');
-        title3.parentElement.classList.remove('active');
-      });
-  
-      title3.addEventListener('click', function () {
-        title1.parentElement.classList.remove('active');
-        title2.parentElement.classList.remove('active');
-        title3.parentElement.classList.add('active');
-      });
-    });
-  </script>
-  
-    <div class="contact-map">
-      <h3>Find us on the map:</h3>
-      <iframe src="https://goo.gl/maps/hPrhYQrMtDRon37M6" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-  
-    <div class="row">
-      <div class="column">
-        <div class="contact-hours">
-          <h2>Office Hours</h2>
-          <p>
-            <b>Monday - Friday:</b> 9am - 5pm
-          </p>
-          <p>
-            <b>Saturday:</b> 10am - 2pm
-          </p>
-          <p>
-            <b>Sunday:</b> Closed
-          </p>
-        </div>
+
+  <div class="contact-map">
+    <h3>Find us on the map:</h3>
+    <iframe src="https://goo.gl/maps/hPrhYQrMtDRon37M6" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <div class="contact-hours">
+        <h2>Office Hours</h2>
+        <p>
+          <b>Monday - Friday:</b> 9am - 5pm
+        </p>
+        <p>
+          <b>Saturday:</b> 10am - 2pm
+        </p>
+        <p>
+          <b>Sunday:</b> Closed
+        </p>
       </div>
-      <div class="column">
-        <div class="contact-directions">
-          <h2>Directions</h2>
-          <p>
-            Our school is located just off of <b>Main Street</b>. Take the <b>101 South</b> to <b>Exit 123</b> and follow the signs to the school.
-          </p>
-        </div>
+    </div>
+    <div class="column">
+      <div class="contact-directions">
+        <h2>Directions</h2>
+        <p>
+          Our school is located just off of <b>Main Street</b>. Take the <b>101 South</b> to <b>Exit 123</b> and follow the signs to the school.
+        </p>
       </div>
     </div>
   </div>
